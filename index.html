@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: w;
+    src: url(./fonts/WanoQuin-ExtraBold.otf);
+}
+
+
+body{
+    color: rgba(214, 218, 219, 0.308);
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    background-color: #141414;
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    z-index: 1000;
+}
+
+.navbar span{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 50px;
+    background: linear-gradient(90deg , transparent , rgb(2, 129, 108));
+    animation: animate 5s infinite linear;
+}
+
+
+@keyframes animate {
+    0%{
+        left: 0;
+        transform: translate(-100%);
+    }
+    100%{
+        left: 100%;
+        transform: translate(0%);
+    }
+}
+
+.logo{
+    text-transform: capitalize;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: w;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+a:hover
+{
+    color: #680796;
+    background: #056dc2;
+    box-shadow: 0 0 10px #7504aa, 0 0 40px #46027e, 0 0 80px #2a0177;
+}
+
+.menu{
+    display: flex;
+    gap: 5rem;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+
+.btn{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+
+.wrapper{
+    display: flex;
+}
+
+section{
+    width: 100vw;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.video-section video{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -2;
+    position: relative;
+}
+
+.img-container{
+    position: absolute;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+
+.section{
+    background-color: #141414;
+    padding: 7rem;
+}
+
+.boxes-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.columns{
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.col img{
+    object-fit: cover;
+}
+
+
+.col-1{
+    display: flex;
+    gap: 1.5rem;
+    flex: 5;
+}
+.box1 .col-1 img:first-child{
+    width: 150px;
+    height: 180px;
+    transform: translateY(-30px);
+}
+
+.box1 .col-1 img:nth-child(2){
+    width: 380px;
+    height: 430px;
+}
+.col-3{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    flex: 4;
+}
+
+.box1 .col-3 img:first-child{
+    width: 320px;
+    height: 170px;
+
+}
+
+.box1 .col-3 img:nth-child(2){
+    width: 150px;
+}
+.box1 .col-3 img:nth-child(3){
+    width: 200px;
+    height: 200px;
+}
+
+.col-2{
+    margin: auto;
+    flex: 1.5;
+}
+
+.col-2 h1{
+    font-family: w;
+    font-size: 100px;
+    text-transform: capitalize;
+    position: absolute;
+    top: 50px;
+    left: 47%;
+    z-index: 100;
+}
+.box1 .col-2 h1{
+    top: 0;
+}
+.col-2 span{
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing:3px;
+    opacity: .7;
+}
+
+
+.line{
+    height: 1px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, .1);
+    margin: 2rem 0;
+}
+
+.text-box p{
+    font-size: 12px;
+    line-height: 1.9;
+    padding-bottom: 1rem;
+    opacity: .7;
+    
+}
+
+.box2 .col-1 img:first-child{
+    width: 200px;
+    height: 250px;
+    transform: translateY(200px);
+}
+
+
+.box2 .col-1 img:nth-child(2){
+    height: 380px;
+    width: 300px;
+}
+.box2 .col-3 img:nth-child(1){
+    height: 300px;
+    width: 220px;
+}
+
+.box2 .col-3 img:nth-child(2){
+    width: 180px;
+    height: 200px;
+    align-self: flex-end;
+}
+.box2 .col-3 img:nth-child(3){
+    width: 380px;
+    height: 200px;
+    transform: translateX(80px);
+}
+
+
+.box3 .col-1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box3 .col-1 img:nth-child(1){
+    width: 200px;
+    height: 280px;
+    transform: translateX(30px);
+    
+    
+}
+.box3 .col-1 img:nth-child(2){
+    width: 180px;
+    height: 200px;
+    margin-left: 80px;
+    align-self: center;
+    
+}
+.box3 .col-1 img:nth-child(3){
+    width: 280px;
+    height: 180px;
+    
+}
+.box3 .col-1 img:nth-child(4){
+    width: 250px;
+    height: 180px;
+    transform: translateY(-30px);
+}
+
+.box3 .col-3 img{
+    width: 400px;
+    height: auto;
+}
+footer{
+    background-color: #141414;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+
+.text-content{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.title{
+    font-family: w;
+    width: 450px;
+    position: relative;
+    height: 110px;
+    overflow: hidden;
+}
+
+.bg{
+    font-size: 100px;
+}
+
+.sm{
+    font-size: 35px;
+    height: 40px;
+}
+
+.left{
+    left: -25%;
+}
+.right{
+    top: 50px;
+    left: 75%;
+}
+
+.title span{
+    position: absolute;
+}
+
+.n{
+    z-index: -1;
+    
+}
+
+.text-content p{
+    transform: translateY(150px);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 12px;
+    font-weight: 300;
+}
+
+.v_container{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* opacity: 0; */
+}
+.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem;
+    gap: 5rem;
+}
+
+.tv{
+    font-family: w;
+    display: flex;
+    text-transform: capitalize;
+}
+
+.bottom{
+    transform: translateY(70px);
+}
+
+
+
+.text-container{
+    max-width: 260px;
+}
+
+.text-container p{
+    padding-bottom: 1rem;
+    line-height: 1.4;
+    opacity: .8;
+}
+
+
+.right-side{
+    /* background-color: blue; */
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: rgba(255, 255, 255, .6);
+    border-radius: 50%;
+    position: relative;
+}
+
+.right-side p{
+    position: absolute;
+    top: 45%;
+    left: -15%;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.fa-arrow-right-long{
+    transform: translateX(20px);
+}
+
+/**JS**/
+    </style>
+    <header>
+        <nav class="navbar">
+            <span></span>
+            <div class="logo">Andy</div>
+            <ul class="menu">
+                <li><a href="andy.html" class="active">Proceed</a></li>
+                
+            </ul>
+            <div class="btn">instegram</div>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <section class="video-section">
+            <div class="video-container">
+                <video src="image/bubble-overlay-particle-background-animation.mp4" autoplay loop muted></video>
+            </div>
+            <div class="img-container">
+                <img src="image/window.png" alt="" class="img">
+            </div>
+
+            <div class="text-content">
+                <div class="img_txt">
+                    <div class="title sm left">
+                        <span>Hi.</span>
+                    </div>
+                    <div class="title bg left">
+                        <span>Wel</span>
+                    </div>
+                    <div class="title bg right n">
+                        <span>C</span>
+                    </div>
+                    <div class="title bg right">
+                        <span>OME</span>
+                    </div>
+                </div>
+                <p class="txt-bottom">
+                    OLCA211_N028
+                </p>
+            </div>
+            <div class="v_container">
+                <div class="left-side">
+                    <div class="tv">
+                        <div class="bg">SCROLL</div>
+                        <div class="sm">More</div>
+                        <div class="bg bottom"><3</div>
+                    </div>
+                    <div class="text-container">
+                        <p>
+                            I want to Present 1st
+                        </p>
+                        <p>
+                        My Photo of me and my Family <3
+
+                        </p>
+                    </div>
+                </div>
+               
+                <div class="right-side">
+                    <p>Gallery<i class="fa-solid fa-arrow-right-long"></i></p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="boxes-container">
+                <div class="columns box1">
+                    <div class="col col-1">
+                        <img src="image/balitos1.jpg" alt="">
+                        <img src="image/balitos2.jpg" alt="">
+                    </div>
+                    <div class="col-2">
+                        <h1>My</h1>
+                        <span>Siter</span>
+                        <span>Brother</span>
+                        <div class="line"></div>
+                        <div class="text-box">
+                            <p>
+                                <3 <3
+                            </p>
+                            <p>
+                            
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-3">
+                        <img src="image/balitos3.jpg" alt="">
+                        <img src="image/balitos4.jpg" alt="">
+                        <img src="image/balitos5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="columns box2">
+                    <div class="col col-1">
+                        <img src="image/10.jpg" alt="">
+                        <img src="image/11.jpg" alt="">
+                    </div>
+                    <div class="col-2">
+                        <h1>My</h1>
+                        <span>Cousins</span>
+                        <div class="line"></div>
+                        <div class="text-box">
+                            <p>
+                                Bonding.
+                            </p>
+                            <p>
+                                With Them
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-3">
+                        <img src="image/6.jpg" alt="">
+                        <img src="image/7.jpg" alt="">
+                        <img src="image/8.jpg" alt="">
+                    </div>
+                </div>
+                <div class="columns box3">
+                    <div class="col col-1">
+                        <img src="image/9.jpg" alt="">
+                        <img src="image/11.jpg" alt="">
+                        <img src="image/15.jpg" alt="">
+                        <img src="image/16.jpg" alt="">
+                    </div>
+                    <div class="col-2">
+                        <h1>vibes</h1>
+                        <span>BALITOS FAM</span>
+                        <div class="line"></div>
+                        <div class="text-box">
+                            <p>
+                              
+                            </p>
+                            <p>
+
+                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-3">
+                        <img src="image/16.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer>
+        <div class="logo"><a href="#">ANDY</a></div>
+        <div class="btn">instegram</div>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({
+  toggleActions:"play none none reverse"
+})
+
+
+gsap.to('.img-container',{
+  scale:52,
+  ease:"ease",
+  scrollTrigger:{
+    trigger:'.video-section',
+    scrub:1,
+    start:"top top",
+    end:"bottom",
+    pin:true
+  }
+})
+
+
+gsap.to('.right' ,{
+  autoAlpha:0,
+  x:500,
+  duration:1.5,
+  scrollTrigger:{
+    start:1
+  }
+})
+gsap.to('.left' ,{
+  autoAlpha:0,
+  x:-500,
+  duration:1.5,
+  scrollTrigger:{
+    start:1
+  }
+})
+
+
+gsap.to('.txt-bottom',{
+  autoAlpha:0,
+  letterSpacing:-10,
+  duration:2,
+  scrollTrigger:{
+    start:2
+  }
+})
+
+
+const tl = gsap.timeline();
+
+tl.from('.left-side div',{
+  y:150,
+  opacity:0,
+  stagger:{
+    amount:.4
+  },
+  delay:.5
+}).from('.right-side',{opacity:0,duration:2},.5)
+.to('.wrapper' ,{x:-window.innerWidth})
+
+
+
+ScrollTrigger.create({
+  animation:tl,
+  trigger:'.wrapper',
+  start:"top top",
+  end:"+=600",
+  scrub:1,
+  pin:true,
+  ease:"ease"
+})
+
+
+
+gsap.utils.toArray('.col').forEach(image=>{
+  gsap.fromTo(image,{
+    opacity:.3,
+    x:0
+  },{
+    opacity:1,
+    x:-50,
+    scrollTrigger:{
+      trigger:image,
+      start:"10%",
+      stagger:{
+        amount:.4
+      }
+    }
+  })
+})
+
+const timeline = gsap.timeline();
+
+timeline.from('.title span' ,{
+  y:150,
+  skewY:7,
+  duration:3
+}).from('.txt-bottom',{
+  letterSpacing:-10,
+  opacity:0,
+  duration:3
+})
+</script>
+
+</html>
